@@ -5,6 +5,16 @@ import App from './App'
 import Axios from 'axios'
 import qs from "qs"
 import router from './router'
+import Element from 'element-ui';
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(Element, { size: 'small', zIndex: 3000 });
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: 'dist/error.png',
+  loading: 'dist/loading.gif',
+  attempt: 1
+})
 
 Vue.prototype.$axios = Axios
 
