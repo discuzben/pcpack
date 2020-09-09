@@ -17,6 +17,7 @@
         </el-carousel-item>
       </el-carousel>
     </div>
+    <div class="box">box</div>
   </div>
 </template>
 
@@ -33,7 +34,7 @@
       }
     },
     created() {
-      this.$axios.post('/sharefile', {
+      this.$axios.post('sharefile', {
           id: 'AB01b19a851bB74311864A1',
           code: 1111
         })
@@ -48,7 +49,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
   h1,
   h2 {
     font-weight: normal;
@@ -82,4 +83,17 @@
     .el-carousel__item:nth-child(2n+1) {
        background-color: #d3dce6;
     }
+    @nice-blue: #5B83AD;
+    @light-blue: @nice-blue + #111;
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: @light-blue;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 </style>

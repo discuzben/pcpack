@@ -10,6 +10,9 @@
       <li>
         <router-link :to="{ name: 'Master', params:{count:100, type:obj} }">hellomaster</router-link>
       </li>
+      <li>
+        <router-link :to="'/Quill'">helloiwen</router-link>
+      </li>
     </ul>
   </div>
 </template>

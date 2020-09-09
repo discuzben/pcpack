@@ -4,7 +4,7 @@
     <h1>{{ msg }}</h1>
     <ul>
       <li>
-        <img src="../assets/logo.png" alt="">
+        <img src="../../assets/logo.png" alt="">
       </li>
     </ul>
     <el-row>
@@ -15,6 +15,11 @@
       <el-button type="warning">警告按钮</el-button>
       <el-button type="danger">危险按钮</el-button>
     </el-row>
+    <ul>
+      <li v-for="img in list">
+        <img v-lazy="img.src" >
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -26,7 +31,10 @@
     },
     data() {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Welcome to Your Vue.js mobile App',
+        list: [{src:'https://tse3-mm.cn.bing.net/th/id/OIP.yaPUIGRPtnAOa_gP4R6iWAHaGl?pid=Api&rs=1'},
+        {src:'https://pic4.zhimg.com/v2-588b5a5dd202c4ec9c7f258df5df2f79_r.jpg'},
+        {src:'https://tsse1-mm.cn.bing.net/th/id/OIP.yPEBi69raqV5QW3aTmEQsgHaFj?pid=Api&rs=1'}]
       }
     },
     created() {
@@ -42,7 +50,7 @@
       //   .catch(function(error) {
       //     console.log(error);
       //   });
-      this.$axios.post('/sharefile', {
+      this.$axios.post('sharefile', {
           id: 'AB01b19a851bB74311864A1',
           code: 1111
         })
