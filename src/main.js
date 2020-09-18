@@ -7,9 +7,13 @@ import mobRouter from './mobile/router'
 import Axios from './axios'
 import Element from 'element-ui';
 import VueLazyload from 'vue-lazyload'
+import store from './vuex'
+import '@/assets/public/public.css'
 
-
-Vue.use(Element, { size: 'small', zIndex: 3000 });
+Vue.use(Element, {
+  size: 'small',
+  zIndex: 3000
+});
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: require('./assets/error.png'),
@@ -17,19 +21,23 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 
+
 Vue.config.productionTip = false
 
 //判断是否为移动设备，是，则切换为移动端的路由
 let router;
 if (/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)) {
-    router = mobRouter
-}else{
+  router = mobRouter
+} else {
   router = pcRouter
 }
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  store,
+  components: {
+    App
+  },
   template: '<App/>'
 })

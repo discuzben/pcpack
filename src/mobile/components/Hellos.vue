@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavList />
+    <!-- <NavList />
     <div class="block">
       <span class="demonstration">默认 Hover 指示器触发</span>
       <el-carousel height="150px">
@@ -17,14 +17,14 @@
         </el-carousel-item>
       </el-carousel>
     </div>
-    <div class="box">box</div>
+    <div class="box">box</div> -->
   </div>
 </template>
 
 <script>
   import NavList from "./NavList"
   export default {
-    name: 'HelloWorld',
+    name: 'Helloworld',
     components: {
       NavList
     },
@@ -34,16 +34,21 @@
       }
     },
     created() {
-      this.$axios.post('sharefile', {
-          id: 'AB01b19a851bB74311864A1',
-          code: 1111
-        })
-        .then(function(res) {
-          console.log(res);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      // var url = this.HOST + "/getActive";
+      // console.log(url)
+      // this.$axios.post(url, {
+      //     // id: 'AB01b19a851bB74311864A1',
+      //     // code: 1111
+      //   })
+      //   .then(function(res) {
+      //     console.log(res);
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
+    },
+    mounted(){
+      console.log(this.$store.state)
     }
   }
 </script>

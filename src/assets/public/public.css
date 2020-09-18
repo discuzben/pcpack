@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  min-width: 1150px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #48576a;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.w {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.mtb-large {
+  margin: 20px auto;
+}
+
+.top-panel {
+  width: 100%;
+  background: #fff;
+  min-height: 80px;
+  box-shadow: 0 0 5px 1px #efebeb;
+  border-radius: 0;
+  z-index: 20;
+}
+
+._flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.panel {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px 1px #efebeb;
+  border-radius: 3px;
+}
+
+.panel .title {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #efefef;
+  padding: 0 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #151519;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.panel .title .tools-box {
+  float: right;
+  height: 45px;
+  line-height: 45px;
+  padding-right: 16px;
+  text-align: right;
+  font-size: 15px;
+}
+
+.panel .title .tools-box a {
+  color: #2093ff;
+}
+
+.panel .content {
+  padding: 16px;
+}
+
+.el-upload,
+.el-upload-dragger {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.el-upload-dragger {
+  background-color: #fff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 115px;
+  position: relative;
+  overflow: hidden;
+}
+
+.el-upload-dragger .el-icon-upload {
+  font-size: 50px;
+  color: #97a8be;
+  margin: 10px 0 0;
+}
+
+.ql-snow.ql-toolbar button,
+.ql-snow .ql-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 24px;
+  margin: 0 8px;
+}
+
+.ql-editor {
+  min-height: 270px !important;
+  line-height: 26px;
+  color: #222;
+}
+
+.ql-snow .ql-picker {
+  color: #444;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  height: 22px;
+  line-height: 22px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.ql-toolbar.ql-snow {
+  border: 1px solid #bfcbd9;
+  padding: 0;
+  height: 40px;
+  line-height: 35px;
+  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+}
+
+.mt-large {
+  margin-top: 20px;
+}

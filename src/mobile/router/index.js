@@ -1,9 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '../components/HelloWorld'
-import Hellos from '../components/Hellos'
-import Master from '../components/Master'
-import Quill from '../components/Quill'
+import Vue from 'vue';
+import Router from 'vue-router';
+import HelloWorld from '../components/HelloWorld';
+import Hellos from '../components/Hellos';
+import Master from '../components/Master';
+import Quill from '../components/Quill';
+import Home from '../components/Home';
 
 Vue.use(Router)
 
@@ -13,13 +14,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/Hellos',
       name: 'Hellos',
       component: Hellos
+    },
+    {
+      path: '/HelloWorld',
+      name: 'HelloWorld',
+      component: HelloWorld
     },
     {
       path: '/Master/:count/:type',
@@ -30,6 +36,11 @@ export default new Router({
       path: '/Quill',
       name: 'Quill',
       component: Quill
-    }
+    },
+    {
+      path: 'Home',
+      name: 'Home',
+      component: Home
+    },
   ]
 })
